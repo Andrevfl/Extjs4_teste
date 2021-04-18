@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<meta charset="UTF-8"> 
+<head>
+    <link rel="stylesheet" href="../extjs/resources/css/ext-all.css">
+    <script src="../extjs/ext-all.js"></script>
+    <script src="../extjs/locale/ext-lang-pt_BR.js"></script>
+    <script src="../jquery/jquery.mim.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="botao01"></div>
+    <div id="botao02"></div>
+    <div id="botao03"></div>
+ 
+    
+</body>
+    <script>
+        Ext.define('MeuBotao',{
+            extend: 'Ext.button.Button',
+            text: 'Dinheiro',
+            //renderTo: Ext.getBody(),
+
+            initComponent: function(){
+               this.text = 'meu botao',
+               this.callParent();
+            },
+
+        });
+
+        Ext.onReady(function(){
+
+           Ext.create('MeuBotao',{
+            renderTo: 'botao01',
+
+           });
+
+           Ext.create('MeuBotao',{
+            renderTo: 'botao02',
+            
+           });
+
+           Ext.create('MeuBotao',{
+            renderTo: 'botao03',
+            
+           });
+           
+                
+        });
+            
+
+    </script>
+    
+
+</html>
